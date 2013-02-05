@@ -82,7 +82,7 @@ IF "%vs%"=="" (
 				SET "vs=%vs2008%"
 				SET "GYP_MSVS_VERSION=2008"
 			) ELSE (
-				ECHO usage: %0 ia32/x64 vs2008/vs2010
+				ECHO usage: %0 ia32/x64 vs2012/vs2008/vs2010
 				EXIT /b 1
 			)
 		)
