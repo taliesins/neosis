@@ -7,8 +7,10 @@
 *.csproj.user
 *.TeamCity.user
 *.DotSettings.user
-
+*.ncb
+*.sdf
 # Resharper
 *[Rr]e[Ss]harper.user
 _ReSharper.*/
 bin/
+*.user
