@@ -21,7 +21,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)VS2008\$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
@@ -45,7 +45,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../v8/include"
+				AdditionalIncludeDirectories="../../../v8/include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;_BIND_TO_CURRENT_CRT_VERSION"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="0"
@@ -98,7 +98,7 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
-			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)"
 			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
@@ -123,7 +123,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../v8/include"
+				AdditionalIncludeDirectories="../../../v8/include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;_BIND_TO_CURRENT_CRT_VERSION"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="0"
@@ -176,7 +176,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)VS2008\$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
@@ -202,7 +202,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="../../v8/include"
+				AdditionalIncludeDirectories="../../../v8/include"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_BIND_TO_CURRENT_CRT_VERSION"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -254,7 +254,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
-			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)"
 			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
@@ -281,7 +281,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="../../v8/include"
+				AdditionalIncludeDirectories="../../../v8/include"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_BIND_TO_CURRENT_CRT_VERSION"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"

@@ -37,35 +37,35 @@ mkdir %reldir%\.Net4.5\x64
 :: Build.
 cmd /c newbuildv8 ia32 vs2012 v90 release
 if errorlevel 1 goto error
-C:\Windows\Microsoft.NET\Framework\v3.5\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2008.sln /p:Configuration=Release /p:Platform=Win32
+C:\Windows\Microsoft.NET\Framework\v3.5\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2008.sln /m /p:Configuration=Release /p:Platform=Win32
 if errorlevel 1 goto error
 cmd /c newbuildv8 x64 vs2008 v90 release
 if errorlevel 1 goto error
-C:\Windows\Microsoft.NET\Framework\v3.5\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2008.sln /p:Configuration=Release /p:Platform=x64
+C:\Windows\Microsoft.NET\Framework\v3.5\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2008.sln /m /p:Configuration=Release /p:Platform=x64
 if errorlevel 1 goto error
 cmd /c newbuildv8 ia32 vs2012 v100 release
 if errorlevel 1 goto error
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2010.sln /p:Configuration=Release /p:Platform=Win32
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2010.sln /m /p:Configuration=Release /p:Platform=Win32
 if errorlevel 1 goto error
 cmd /c newbuildv8 x64 vs2012 v100 release
 if errorlevel 1 goto error
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2010.sln /p:Configuration=Release /p:Platform=x64
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2010.sln /m /p:Configuration=Release /p:Platform=x64
 if errorlevel 1 goto error
 cmd /c newbuildv8 ia32 vs2012 v110 release
 if errorlevel 1 goto error
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /p:Configuration=Release /p:Platform=Win32
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=Win32
 if errorlevel 1 goto error
 cmd /c newbuildv8 x64 vs2012 v110 release
 if errorlevel 1 goto error
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /p:Configuration=Release /p:Platform=x64
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=x64
 if errorlevel 1 goto error
 
 :: Copy files across.
 copy README.txt %reldir%
 if errorlevel 1 goto error
-copy Release\Noesis.Javascript.dll %reldir%\.Net3.5\x86
+copy Release\VS2008\Noesis.Javascript.dll %reldir%\.Net3.5\x86
 if errorlevel 1 goto error
-copy x64\Release\Noesis.Javascript.dll %reldir%\.Net3.5\x64
+copy x64\VS2008\Release\Noesis.Javascript.dll %reldir%\.Net3.5\x64
 if errorlevel 1 goto error
 copy Release\VS2010\Noesis.Javascript.dll %reldir%\.Net4.0\x86
 if errorlevel 1 goto error

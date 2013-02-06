@@ -121,7 +121,6 @@ DEL /S *.vcxproj.user
 
 
 :: Set environment required for scons to use the right toolset.
-SET PATH=
 SET PATH=%python%;%python%\Scripts;%PATH%
 SET PATH=%vs%\VC\bin%adm64suffix%;%vs%\Common7\IDE;%vs%\Common7\IDE;%vs%\Common7\Tools;%PATH%
 SET INCLUDE=%vs%\VC\include;%sdk%\Include
