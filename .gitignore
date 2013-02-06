@@ -9,6 +9,7 @@
 *.DotSettings.user
 *.ncb
 *.sdf
+*.opensdf
 # Resharper
 *[Rr]e[Ss]harper.user
 _ReSharper.*/

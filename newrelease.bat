@@ -52,12 +52,14 @@ if errorlevel 1 goto error
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2010.sln /m /p:Configuration=Release /p:Platform=x64
 if errorlevel 1 goto error
 cmd /c newbuildv8 ia32 vs2012 v110 release
-if errorlevel 1 goto error
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=Win32
+if errorlevel 1 goto errorC:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=Win32 /p:VisualStudioVersion=11.0
+
+
 if errorlevel 1 goto error
 cmd /c newbuildv8 x64 vs2012 v110 release
 if errorlevel 1 goto error
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=x64
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=11.0
+
 if errorlevel 1 goto error
 
 :: Copy files across.
