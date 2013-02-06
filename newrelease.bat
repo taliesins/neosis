@@ -12,6 +12,10 @@
 :: - Ignore warnings like
 ::   JavascriptInterop.obj : warning LNK4248: unresolved typeref token (0100002A) for 'v8.internal.Object'; image may not run
 
+if "%VC_PROJECT_ENGINE_NOT_USING_REGISTRY_FOR_INIT%"=="" (
+	echo Add environment variable VC_PROJECT_ENGINE_NOT_USING_REGISTRY_FOR_INIT=1
+)
+
 if "%1"=="" (
     echo See instructions at the top of this file.
     echo usage: release relnum
