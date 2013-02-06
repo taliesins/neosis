@@ -21,8 +21,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)VS2008\$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)\bin"
+			IntermediateDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)\obj"
 			ConfigurationType="2"
 			CharacterSet="1"
 			ManagedExtensions="1"
@@ -98,8 +98,8 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
-			OutputDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)\bin"
+			IntermediateDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)\obj"
 			ConfigurationType="2"
 			CharacterSet="1"
 			ManagedExtensions="1"
@@ -176,8 +176,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)VS2008\$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)\bin"
+			IntermediateDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)\obj"
 			ConfigurationType="2"
 			CharacterSet="1"
 			ManagedExtensions="1"
@@ -254,8 +254,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
-			OutputDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)"
-			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)\bin"
+			IntermediateDirectory="$(SolutionDir)VS2008\$(PlatformName)\$(ConfigurationName)\obj"
 			ConfigurationType="2"
 			CharacterSet="1"
 			ManagedExtensions="1"

@@ -52,37 +52,35 @@ if errorlevel 1 goto error
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2010.sln /m /p:Configuration=Release /p:Platform=x64
 if errorlevel 1 goto error
 cmd /c newbuildv8 ia32 vs2012 v110 release
-if errorlevel 1 goto errorC:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=Win32 /p:VisualStudioVersion=11.0
-
-
+if errorlevel 1 goto error
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=Win32 /p:VisualStudioVersion=11.0
 if errorlevel 1 goto error
 cmd /c newbuildv8 x64 vs2012 v110 release
 if errorlevel 1 goto error
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=11.0
-
 if errorlevel 1 goto error
 
 :: Copy files across.
 copy README.txt %reldir%
 if errorlevel 1 goto error
-copy Release\VS2008\Noesis.Javascript.dll %reldir%\.Net3.5\x86
+copy VS2008\Win32\Release\bin\Noesis.Javascript.dll %reldir%\.Net3.5\x86
 if errorlevel 1 goto error
-copy x64\VS2008\Release\Noesis.Javascript.dll %reldir%\.Net3.5\x64
+copy VS2008\x64\Release\bin\Noesis.Javascript.dll %reldir%\.Net3.5\x64
 if errorlevel 1 goto error
-copy Release\VS2010\Noesis.Javascript.dll %reldir%\.Net4.0\x86
+copy VS2010\Win32\Release\bin\Noesis.Javascript.dll %reldir%\.Net4.0\x86
 if errorlevel 1 goto error
-copy x64\VS2010\Release\Noesis.Javascript.dll %reldir%\.Net4.0\x64
+copy VS2010\x64\Release\bin\Noesis.Javascript.dll %reldir%\.Net4.0\x64
 if errorlevel 1 goto error
-copy Release\VS2012\Noesis.Javascript.dll %reldir%\.Net4.5\x86
+copy VS2012\Win32\Release\bin\Noesis.Javascript.dll %reldir%\.Net4.5\x86
 if errorlevel 1 goto error
-copy x64\VS2012\Release\Noesis.Javascript.dll %reldir%\.Net4.5\x64
+copy VS2012\x64\Release\bin\Noesis.Javascript.dll %reldir%\.Net4.5\x64
 if errorlevel 1 goto error
 copy "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\redist\x86\Microsoft.VC90.CRT\*.*" %reldir%\.Net3.5\x86
 copy "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\redist\amd64\Microsoft.VC90.CRT\*.*" %reldir%\.Net3.5\x64
 copy "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\redist\x86\Microsoft.VC100.CRT\*.*" %reldir%\.Net4.0\x86
 copy "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\redist\x64\Microsoft.VC100.CRT\*.*" %reldir%\.Net4.0\x64
-copy "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\redist\x86\Microsoft.VC110.CRT\*.*" %reldir%\.Net4.5\x86
-copy "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\redist\x64\Microsoft.VC110.CRT\*.*" %reldir%\.Net4.5\x64
+copy "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\redist\x86\Microsoft.VC110.CRT\*.*" %reldir%\.Net4.5\x86
+copy "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\redist\x64\Microsoft.VC110.CRT\*.*" %reldir%\.Net4.5\x64
 goto end
 
 :error
