@@ -23,21 +23,6 @@ if "%1"=="" (
     exit /b 1
 )
 
-:: Delete any existing files and create directory structure.
-set reldir="Noesis.Javascript v%1 - Binaries"
-if exist %reldir% rmdir /s /q %reldir%
-mkdir %reldir%
-if errorlevel 1 goto error
-mkdir %reldir%\.Net3.5
-mkdir %reldir%\.Net4.0
-mkdir %reldir%\.Net4.5
-mkdir %reldir%\.Net3.5\x86
-mkdir %reldir%\.Net3.5\x64
-mkdir %reldir%\.Net4.0\x86
-mkdir %reldir%\.Net4.0\x64
-mkdir %reldir%\.Net4.5\x86
-mkdir %reldir%\.Net4.5\x64
-
 :: Build.
 cmd /c newbuildv8 ia32 vs2012 v90 release
 if errorlevel 1 goto error
@@ -64,27 +49,68 @@ if errorlevel 1 goto error
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:Rebuild Noesis.Javascript.VS2012.sln /m /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=11.0
 if errorlevel 1 goto error
 
+:: Delete any existing files and create directory structure.
+set reldir="Noesis.Javascript v%1 - Binaries"
+if exist %reldir% rmdir /s /q "%reldir%"
+mkdir "%reldir%"
+if errorlevel 1 goto error
+
+mkdir "%reldir%\lib"
+mkdir "%reldir%\lib\Net35"
+mkdir "%reldir%\lib\Net40"
+mkdir "%reldir%\lib\Net45"
+mkdir "%reldir%\lib\Net35\x86"
+mkdir "%reldir%\lib\Net35\amd64"
+mkdir "%reldir%\lib\Net40\x86"
+mkdir "%reldir%\lib\Net40\amd64"
+mkdir "%reldir%\lib\Net45\x86"
+mkdir "%reldir%\lib\Net45\amd64"
+
 :: Copy files across.
-copy README.txt %reldir%
+copy README.txt "%reldir%"
 if errorlevel 1 goto error
-copy VS2008\Win32\Release\bin\Noesis.Javascript.dll %reldir%\.Net3.5\x86
+copy "VS2008\Win32\Release\bin\Noesis.Javascript.dll" "%reldir%\lib\Net35\x86\"
 if errorlevel 1 goto error
-copy VS2008\x64\Release\bin\Noesis.Javascript.dll %reldir%\.Net3.5\x64
+copy "VS2008\x64\Release\bin\Noesis.Javascript.dll" "%reldir%\lib\Net35\amd64\"
 if errorlevel 1 goto error
-copy VS2010\Win32\Release\bin\Noesis.Javascript.dll %reldir%\.Net4.0\x86
+copy "VS2010\Win32\Release\bin\Noesis.Javascript.dll" "%reldir%\lib\Net40\x86\"
 if errorlevel 1 goto error
-copy VS2010\x64\Release\bin\Noesis.Javascript.dll %reldir%\.Net4.0\x64
+copy "VS2010\x64\Release\bin\Noesis.Javascript.dll" "%reldir%\lib\net40\amd64\"
 if errorlevel 1 goto error
-copy VS2012\Win32\Release\bin\Noesis.Javascript.dll %reldir%\.Net4.5\x86
+copy "VS2012\Win32\Release\bin\Noesis.Javascript.dll" "%reldir%\lib\Net45\x86\"
 if errorlevel 1 goto error
-copy VS2012\x64\Release\bin\Noesis.Javascript.dll %reldir%\.Net4.5\x64
+copy "VS2012\x64\Release\bin\Noesis.Javascript.dll" "%reldir%\lib\Net45\amd64\"
 if errorlevel 1 goto error
-copy "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\redist\x86\Microsoft.VC90.CRT\*.*" %reldir%\.Net3.5\x86
-copy "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\redist\amd64\Microsoft.VC90.CRT\*.*" %reldir%\.Net3.5\x64
-copy "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\redist\x86\Microsoft.VC100.CRT\*.*" %reldir%\.Net4.0\x86
-copy "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\redist\x64\Microsoft.VC100.CRT\*.*" %reldir%\.Net4.0\x64
-copy "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\redist\x86\Microsoft.VC110.CRT\*.*" %reldir%\.Net4.5\x86
-copy "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\redist\x64\Microsoft.VC110.CRT\*.*" %reldir%\.Net4.5\x64
+
+
+mkdir "%reldir%\NativeBinaries"
+mkdir "%reldir%\NativeBinaries\Net35"
+mkdir "%reldir%\NativeBinaries\Net40"
+mkdir "%reldir%\NativeBinaries\Net45"
+mkdir "%reldir%\NativeBinaries\Net35\x86"
+mkdir "%reldir%\NativeBinaries\Net35\amd64"
+mkdir "%reldir%\NativeBinaries\Net40\x86"
+mkdir "%reldir%\NativeBinaries\Net40\amd64"
+mkdir "%reldir%\NativeBinaries\Net45\x86"
+mkdir "%reldir%\NativeBinaries\Net45\amd64"
+
+copy "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\redist\x86\Microsoft.VC90.CRT\*.*" "%reldir%\NativeBinaries\Net35\x86\"
+copy "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\redist\amd64\Microsoft.VC90.CRT\*.*" "%reldir%\NativeBinaries\Net35\amd64\"
+copy "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\redist\x86\Microsoft.VC100.CRT\*.*" "%reldir%\NativeBinaries\Net40\x86\"
+copy "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\redist\x64\Microsoft.VC100.CRT\*.*" "%reldir%\NativeBinaries\net40\amd64\"
+copy "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\redist\x86\Microsoft.VC110.CRT\*.*" "%reldir%\NativeBinaries\Net45\x86\"
+copy "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\redist\x64\Microsoft.VC110.CRT\*.*" "%reldir%\NativeBinaries\Net45\amd64\"
+
+mkdir "%reldir%\Tools"
+mkdir "%reldir%\Tools\Net35"
+mkdir "%reldir%\Tools\Net40"
+mkdir "%reldir%\Tools\Net45"
+
+copy "Tools\Net35\*.*" "%reldir%\Tools\Net35\"
+copy "Tools\Net40\*.*" "%reldir%\Tools\Net40\"
+copy "Tools\Net45\*.*" "%reldir%\Tools\Net45\"
+
+copy "Noesis.Javascript.nuspec" "%reldir%\"
 goto end
 
 :error
