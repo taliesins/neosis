@@ -16,34 +16,53 @@
     <dependencies></dependencies>	
   </metadata>
   <files>
-	<file src="Net40\amd64\msvcp100.dll" target="NativeBinaries/net40/amd64/Microsoft.VC100.CRT" />
-	<file src="Net40\amd64\msvcr100.dll" target="NativeBinaries/net40/amd64/Microsoft.VC100.CRT" />
-	<file src="Net40\amd64\Noesis.Javascript.dll" target="lib/net40/amd64/Noesis.Javascript.dll" />
+	<file src="NativeBinaries/net45/amd64/msvcp110.dll" target="NativeBinaries/net45/amd64/Microsoft.VC110.CRT" />
+	<file src="NativeBinaries/net45/amd64/msvcr110.dll" target="NativeBinaries/net45/amd64/Microsoft.VC110.CRT" />
+	<file src="NativeBinaries/net45/amd64/vccorlib110.dll" target="NativeBinaries/net45/amd64/Microsoft.VC110.CRT" />
+	<file src="lib/net45/amd64/Noesis.Javascript.dll" target="lib/net45/amd64" />
 	
-	<file src="Net40\x86\msvcp100.dll" target="NativeBinaries/net40/x86/Microsoft.VC100.CRT" />
-	<file src="Net40\x86\msvcr100.dll" target="NativeBinaries/net40/x86/Microsoft.VC100.CRT" />
-	<file src="Net40\x86\Noesis.Javascript.dll" target="lib/net40/x86/Noesis.Javascript.dll" />
+	<file src="NativeBinaries/net45/x86/msvcp110.dll" target="NativeBinaries/net45/x86/Microsoft.VC110.CRT" />
+	<file src="NativeBinaries/net45/x86/msvcr110.dll" target="NativeBinaries/net45/x86/Microsoft.VC110.CRT" />
+	<file src="NativeBinaries/net45/x86/vccorlib110.dll" target="NativeBinaries/net45/x86/Microsoft.VC110.CRT" />
+	<file src="lib/net45/x86/Noesis.Javascript.dll" target="lib/net45/x86" />
 
-	<file src="Net40\tools\Install.ps1" target="tools/net40" />
-	<file src="Net40\tools\Uninstall.ps1" target="tools/net40" />
-	<file src="Net40\tools\VS.psd1" target="tools/net40" />
-	<file src="Net40\tools\VS.psm1" target="tools/net40" />
+	<file src="tools/net45/Install.ps" target="tools/net45" />
+	<file src="tools/net45/Uninstall.ps1" target="tools/net45" />
+	<file src="tools/net45/VS.psd1" target="tools/net45" />
+	<file src="tools/net45/VS.psm1" target="tools/net45" />
+
+
+
+	<file src="NativeBinaries/net40/amd64/msvcp100.dll" target="NativeBinaries/net40/amd64/Microsoft.VC100.CRT/msvcp100.dll" />
+	<file src="NativeBinaries/net40/amd64/msvcr100.dll" target="NativeBinaries/net40/amd64/Microsoft.VC100.CRT/msvcr100.dll" />
+	<file src="lib/net40/amd64/Noesis.Javascript.dll" target="lib/net40/amd64" />
 	
-	<file src="net35\amd64\Microsoft.VC90.CRT.manifest" target="NativeBinaries/net35/amd64/Microsoft.VC90.CRT" />
-	<file src="net35\amd64\msvcm90.dll" target="NativeBinaries/net35/amd64/Microsoft.VC90.CRT" />
-	<file src="net35\amd64\msvcp90.dll" target="NativeBinaries/net35/amd64/Microsoft.VC90.CRT" />
-	<file src="net35\amd64\msvcr90.dll" target="NativeBinaries/net35/amd64/Microsoft.VC90.CRT" />
-	<file src="net35\amd64\Noesis.Javascript.dll" target="lib/net35/amd64/Noesis.Javascript.dll"  />
+	<file src="NativeBinaries/net40/x86/msvcp100.dll" target="NativeBinaries/net40/x86/Microsoft.VC100.CRT" />
+	<file src="NativeBinaries/net40/x86/msvcr100.dll" target="NativeBinaries/net40/x86/Microsoft.VC100.CRT" />
+	<file src="lib/net40/x86/Noesis.Javascript.dll" target="lib/net40/x86" />
+
+	<file src="tools/net40/Install.ps" target="tools/net40" />
+	<file src="tools/net40/Uninstall.ps1" target="tools/net40" />
+	<file src="tools/net40/VS.psd1" target="tools/net40" />
+	<file src="tools/net40/VS.psm1" target="tools/net40" />
+
+
 	
-	<file src="net35\x86\Microsoft.VC90.CRT.manifest" target="NativeBinaries/net35/x86/Microsoft.VC90.CRT" />
-	<file src="net35\x86\msvcm90.dll" target="NativeBinaries/net35/x86/Microsoft.VC90.CRT" />
-	<file src="net35\x86\msvcp90.dll" target="NativeBinaries/net35/x86/Microsoft.VC90.CRT" />
-	<file src="net35\x86\msvcr90.dll" target="NativeBinaries/net35/x86/Microsoft.VC90.CRT" />
-	<file src="net35\x86\Noesis.Javascript.dll" target="lib/net35/x86/Noesis.Javascript.dll" />
+	<file src="NativeBinaries/net35/amd64/Microsoft.VC90.CRT.manifest" target="NativeBinaries/net35/amd64/Microsoft.VC90.CRT" />
+	<file src="NativeBinaries/net35/amd64/msvcm90.dll" target="NativeBinaries/net35/amd64/Microsoft.VC90.CRT" />
+	<file src="NativeBinaries/net35/amd64/msvcp90.dll" target="NativeBinaries/net35/amd64/Microsoft.VC90.CRT" />
+	<file src="NativeBinaries/net35/amd64/msvcr90.dll" target="NativeBinaries/net35/amd64/Microsoft.VC90.CRT" />
+	<file src="lib/net35/amd64/Noesis.Javascript.dll" target="lib/net35/amd64"  />
 	
-	<file src="net35\tools\Install.ps1" target="tools/net35" />
-	<file src="net35\tools\Uninstall.ps1" target="tools/net35" />
-	<file src="net35\tools\VS.psd1" target="tools/net35" />
-	<file src="net35\tools\VS.psm1" target="tools/net35" />
+	<file src="NativeBinaries/net35/x86/Microsoft.VC90.CRT.manifest" target="NativeBinaries/net35/x86/Microsoft.VC90.CRT" />
+	<file src="NativeBinaries/net35/x86/msvcm90.dll" target="NativeBinaries/net35/x86/Microsoft.VC90.CRT" />
+	<file src="NativeBinaries/net35/x86/msvcp90.dll" target="NativeBinaries/net35/x86/Microsoft.VC90.CRT" />
+	<file src="NativeBinaries/net35/x86/msvcr90.dll" target="NativeBinaries/net35/x86/Microsoft.VC90.CRT" />
+	<file src="lib/net35/x86/Noesis.Javascript.dll" target="lib/net35/x86" />
+	
+	<file src="tools/net35/Install.ps1" target="tools/net35" />
+	<file src="tools/net35/Uninstall.ps1" target="tools/net35" />
+	<file src="tools/net35/VS.psd1" target="tools/net35" />
+	<file src="tools/net35/VS.psm1" target="tools/net35" />
   </files>
 </package>

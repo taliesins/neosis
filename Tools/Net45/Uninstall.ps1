@@ -21,7 +21,6 @@ elseif($project.ExtenderNames -contains "WebApplication") {
 		if($amd64) {
 			$crt64 = Get-ChildProjectItem $amd64 "Microsoft.VC110.CRT";
 			if($crt64) {
-				Remove-Child $crt64 "Microsoft.VC110.CRT.manifest";
 				Remove-Child $crt64 "msvcp110.dll";
 				Remove-Child $crt64 "msvcr110.dll";
                 Remove-Child $crt64 "vccorlib110.dll";
@@ -33,7 +32,6 @@ elseif($project.ExtenderNames -contains "WebApplication") {
 		if($x86) {
 			$crt32 = Get-ChildProjectItem $x86 "Microsoft.VC100.CRT";
 			if($crt32) {
-				Remove-Child $crt32 "Microsoft.VC110.CRT.manifest";
 				Remove-Child $crt32 "msvcp110.dll";
 				Remove-Child $crt32 "msvcr110.dll";
                 Remove-Child $crt32 "vccorlib110.dll";
