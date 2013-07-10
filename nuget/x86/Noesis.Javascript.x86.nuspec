@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Noesis.Javascript.x86</id>
+    <version>0.7.1.1</version>
+    <title>Noesis.Javascript - x86</title>
+    <authors>Javascript .Net</authors>
+    <owners>Javascript .Net</owners>
+    <licenseUrl>http://javascriptdotnet.codeplex.com/license</licenseUrl>
+    <projectUrl>http://javascriptdotnet.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Javascript .NET integrates Google's V8 Javascript engine and exposes it to the CLI environment.
+      Javascript .NET compiles (at runtime) and executes scripts directly from .NET code.
+      It allows CLI objects to be exposed and manipulated directly from the executed Javascript.
+      Because the v8 build depends on different CPU target platform, this package requires VC++ runtime.
+      Please make sure you have the correct VC++ runtime installed:
+      For .NET 3.5, install the Microsoft Visual C++ 2008 Redistributable Package (x86)
+      For .NET 4.0, install the Microsoft Visual C++ 2010 Redistributable Package (x86)
+    </description>
+    <summary>Run V8 Javascript engine from .NET</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>javascript runtime v8 noesis</tags>
+    <references>
+      <reference file="Noesis.Javascript.dll" />
+    </references>
+  </metadata>
+</package>

@@ -15,3 +15,6 @@
 _ReSharper.*/
 bin/
 *.user
+v8
+*.dll
+*.nupkg
