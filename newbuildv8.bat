@@ -178,5 +178,15 @@ IF "%vs%"=="%vs2012%" (
 	)
 )
 
+			
+echo ..\fart -r -i "*.vcxproj" "<ConfigurationType>StaticLibrary</ConfigurationType>" "<ConfigurationType>StaticLibrary</ConfigurationType><WholeProgramOptimization>PGOptimize</WholeProgramOptimization>"
+..\fart -r -i "*.vcxproj" "<ConfigurationType>StaticLibrary</ConfigurationType>" "<ConfigurationType>StaticLibrary</ConfigurationType><WholeProgramOptimization>PGOptimize</WholeProgramOptimization>"
+
+echo ..\fart -r -i "*.vcxproj" "<ConfigurationType>Application</ConfigurationType>" "<ConfigurationType>Application</ConfigurationType><WholeProgramOptimization>PGInstrument</WholeProgramOptimization>"
+..\fart -r -i "*.vcxproj" "<ConfigurationType>Application</ConfigurationType>" "<ConfigurationType>Application</ConfigurationType><WholeProgramOptimization>PGInstrument</WholeProgramOptimization>"
+
+echo ..\fart -r -i "preparser\*.vcxproj" "USING_V8_SHARED" "BUILDING_V8_SHARED"
+..\fart -r -i "preparser\*.vcxproj" "USING_V8_SHARED" "BUILDING_V8_SHARED"
+
 echo "%vs%\Common7\IDE\devenv.com" /build "%profile%" build\All.sln
 "%vs%\Common7\IDE\devenv.com" /build "%profile%" build\All.sln

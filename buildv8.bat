@@ -5,7 +5,7 @@
 @ECHO OFF
 
 :: Set directory locations here.
-SET python=C:\Python27
+SET python=%~dp0%third_party\python_26\python.exe
 SET vs2008=C:\Program Files (x86)\Microsoft Visual Studio 9.0
 SET vs2010=C:\Program Files (x86)\Microsoft Visual Studio 10.0
 SET sdk=C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A
